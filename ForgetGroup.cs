@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 internal partial class SourceGenerationContext : JsonSerializerContext { }
 public class Group
 {
-    public string tags { get; set; }
+    public string[] tags { get; set; }
     public string host { get; set; }
     public string[] paths { get; set; }
     public Snapshot[] keep { get; set; }
@@ -19,6 +19,7 @@ public class Snapshot
     public DateTime time { get; set; }
     public string parent { get; set; }
     public string tree { get; set; }
+    public string[] tags { get; set; }
     public string[] paths { get; set; }
     public string hostname { get; set; }
     public string username { get; set; }
